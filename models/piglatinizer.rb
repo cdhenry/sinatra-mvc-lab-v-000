@@ -9,6 +9,7 @@ class PigLatinizer
         words_beginning_with_vowel(word)
       end
     end
+    text.join(" ")
   end
 
   def words_beginning_with_consonant(word)
