@@ -18,6 +18,6 @@ class PigLatinizer
   end
 
   def words_beginning_with_vowel(word)
-    word + "ay"
+    word + "way"
   end
 end
