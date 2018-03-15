@@ -3,9 +3,9 @@ class PigLatinizer
   def piglatinize(text)
     piglatinized_text = text.split(" ").collect do |word|
       case word
-      when /\A[^aeiou]/
+      when /\A[^aeiouAEIOU]/
         words_beginning_with_consonant(word)
-      when /\A[aeiou]/
+      when /\A[aeiouAEIOU]/
         words_beginning_with_vowel(word)
       end
     end
