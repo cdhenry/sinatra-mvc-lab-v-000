@@ -1,8 +1,7 @@
 class PigLatinizer
-  attr_reader :text
 
   def piglatinize(text)
-    @text.downcase.split(" ").collect do |word|
+    text.downcase.split(" ").collect do |word|
       case word
       when /\A[^aeiou]/
         words_beginning_with_consonant(word)
