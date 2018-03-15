@@ -2,7 +2,11 @@ class PigLatinizer
   attr_reader :text
 
   def initialize(text)
-    @text = text.downcase
+    @text = text.downcase.split(" ")
+  end
+
+  def words_beginning_with_consonants
+    words=text.split("")
   end
   #For words that begin with consonant sounds,
   #all letters before the initial vowel are placed at the end of the word sequence.
