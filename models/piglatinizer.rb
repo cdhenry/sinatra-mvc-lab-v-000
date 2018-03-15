@@ -5,7 +5,7 @@ class PigLatinizer
     @text = text.downcase.split(" ")
   end
 
-  def word_transform
+  def piglatinize
     @text.collect do |word|
       case word
       when /\A[^aeiou]/
