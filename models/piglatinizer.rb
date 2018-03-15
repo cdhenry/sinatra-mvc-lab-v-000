@@ -7,11 +7,15 @@ class PigLatinizer
 
   def words_beginning_with_consonants
     @text.collect do |word|
-      if word =~ /\A[^aeiou]/
+      case word
+      when /\A[^aeiou]/
 
-      elsif word =~ /\A[^aeiou]+/
-      elsif word =~ /\A[aeiou]/
+      when /\A[^aeiou]+/
         
+      when /\A[aeiou]/
+        
+      end
+
   end
   #For words that begin with consonant sounds,
   #all letters before the initial vowel are placed at the end of the word sequence.
