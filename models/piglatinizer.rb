@@ -9,7 +9,7 @@ class PigLatinizer
     @text.collect do |word|
       case word
       when /\A[^aeiou]/
-
+        words_beginning_with_consonant(word)
       when /\A[^aeiou]+/
 
       when /\A[aeiou]/
@@ -20,10 +20,6 @@ class PigLatinizer
   def words_beginning_with_consonant(word)
     first_vowel_index = word.index(/[aeiou]/)
     word[first_vowel_index..-1] + word[0..first_vowel_index]
-  end
-
-  def words_beginning_with_consonant_cluster(word)
-
   end
 
   def words_beginning_with_vowel(word)
