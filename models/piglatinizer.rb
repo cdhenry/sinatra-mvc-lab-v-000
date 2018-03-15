@@ -13,7 +13,7 @@ class PigLatinizer
 
   def words_beginning_with_consonant(word)
     first_vowel_index = word.index(/[aeiou]/)
-    word[first_vowel_index..-1] + word[0..first_vowel_index] + "ay"
+    word[first_vowel_index..-1] + word[0..first_vowel_index-1] + "ay"
   end
 
   def words_beginning_with_vowel(word)
