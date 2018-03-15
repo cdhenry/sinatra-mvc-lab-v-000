@@ -6,7 +6,8 @@ class App < Sinatra::Base
   end
 
   post '/piglatinized' do
-    
+
+
     erb :piglatinized
   end
 end
