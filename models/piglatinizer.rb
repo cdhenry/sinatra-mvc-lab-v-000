@@ -1,7 +1,7 @@
 class PigLatinizer
 
   def piglatinize(text)
-    piglatinized_text = text.downcase.split(" ").collect do |word|
+    piglatinized_text = text.split(" ").collect do |word|
       case word
       when /\A[^aeiou]/
         words_beginning_with_consonant(word)
