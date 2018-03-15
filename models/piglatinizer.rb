@@ -5,16 +5,27 @@ class PigLatinizer
     @text = text.downcase.split(" ")
   end
 
-  def words_beginning_with_consonants
+  def word_transform
     @text.collect do |word|
       case word
       when /\A[^aeiou]/
         
-      when /\A[^aeiou]+/
-
+      when /\A[^aeiou]+/ 
+        
       when /\A[aeiou]/
 
       end
+  end
+
+  def words_beginning_with_consonant(word)
+
+  end
+
+  def words_beginning_with_consonant_cluster(word)
+
+  end
+
+  def words_beginning_with_vowel(word)
 
   end
   #For words that begin with consonant sounds,
