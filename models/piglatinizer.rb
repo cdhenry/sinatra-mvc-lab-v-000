@@ -13,6 +13,7 @@ class PigLatinizer
       when /\A[aeiou]/
         words_beginning_with_vowel(word)
       end
+    end
   end
 
   def words_beginning_with_consonant(word)
