@@ -23,6 +23,4 @@ class PigLatinizer
   def words_beginning_with_vowel(word)
     word + "ay"
   end
-
-  #For words that begin with vowel sounds, one just adds "way" or "yay" to the end (or just "ay")
 end
