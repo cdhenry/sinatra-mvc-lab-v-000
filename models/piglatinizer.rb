@@ -9,11 +9,11 @@ class PigLatinizer
     @text.collect do |word|
       case word
       when /\A[^aeiou]/
-
+        
       when /\A[^aeiou]+/
-        
+
       when /\A[aeiou]/
-        
+
       end
 
   end
