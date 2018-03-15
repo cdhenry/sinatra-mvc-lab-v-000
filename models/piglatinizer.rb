@@ -10,27 +10,19 @@ class PigLatinizer
       case word
       when /\A[^aeiou]/
         words_beginning_with_consonant(word)
-      when /\A[^aeiou]+/
-
       when /\A[aeiou]/
-
+        words_beginning_with_vowel(word)
       end
   end
 
   def words_beginning_with_consonant(word)
     first_vowel_index = word.index(/[aeiou]/)
-    word[first_vowel_index..-1] + word[0..first_vowel_index]
+    word[first_vowel_index..-1] + word[0..first_vowel_index] + "ay"
   end
 
   def words_beginning_with_vowel(word)
-
+    word + "ay"
   end
-  #For words that begin with consonant sounds,
-  #all letters before the initial vowel are placed at the end of the word sequence.
-  #Then, "ay" is added
-
-  #When words begin with consonant clusters (multiple consonants that form one sound),
-  #the whole sound is added to the end when speaking or writing.
 
   #For words that begin with vowel sounds, one just adds "way" or "yay" to the end (or just "ay")
 end
